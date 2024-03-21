@@ -32,7 +32,7 @@ while cap.isOpened():
                     x1, y1, x2, y2 = map(int, box.xyxy[i].cpu().numpy())
                     x1, y1, x2, y2 = int(x1), int(y1), int(x2), int(y2)
                     print(x1, y1, x2, y2)
-                    img = annotated_frame[x1:x2, y1:y2]
+                    img = annotated_frame[y1:y2, x1:x2]
 
                     object_id = int(box.id[i])
                     print(object_id)
